@@ -8,7 +8,7 @@
         <em class="customMessage" data-bind='validationMessage: field'></em>
     </script>
 
-    <ul data-bind='foreach: modalErrors'>
+    <ul data-bind='foreach: modelErrors'>
         <li data-bind='text: $data'></li>
     </ul>
     
@@ -82,12 +82,12 @@
                 }
             }),
 
-            message: ko.observable(), modalErrors: ko.observableArray(),
+            message: ko.observable(), modelErrors: ko.observableArray(),
 
             submit: function () {
                 var self = this;
                 if (viewModel.errors().length == 0) {
-                    this.modalErrors.removeAll();
+                    this.modelErrors.removeAll();
                     $.ajax('/api/Ajax/Signup', {
                         type: 'POST',
                         contentType: 'application/json',
@@ -102,7 +102,7 @@
                                 var modelState = result.responseJSON.modelState;
                                 for (var key in modelState) {
                                     for (var i = 0; i < modelState[key].length; i++) {
-                                        self.modalErrors.push(modelState[key][i]);
+                                        self.modelErrors.push(modelState[key][i]);
                                     }
                                 }
                             }
