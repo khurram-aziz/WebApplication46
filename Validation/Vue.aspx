@@ -6,7 +6,7 @@
 
     <div id="app">
         <ul>
-            <li v-for="error in modalErrors">{{error}}</li>
+            <li v-for="error in modelErrors">{{error}}</li>
             <li v-for="error in errors.items">{{error.msg}}</li>
         </ul>
 
@@ -47,11 +47,11 @@
                 subscriptions: [{ text: 'Technology', value: 'Technology' }, { text: 'Music', value: 'Music' }],
                 password: '',
 
-                message: '', modalErrors: [],
+                message: '', modelErrors: [],
             },
             computed: {
                 totalErrors: function () {
-                    return this.errors.items.length + this.modalErrors.length;
+                    return this.errors.items.length + this.modelErrors.length;
                 }
             },
             methods: {
@@ -59,7 +59,7 @@
                     //e.preventDefault();
                     this.$validator.validateAll().then(function (result) {
                         if (result) {
-                            app.modalErrors = [];
+                            app.modelErrors = [];
                             $.ajax('/api/Ajax/Signup', {
                                 type: 'POST',
                                 contentType: 'application/json',
@@ -78,7 +78,7 @@
                                                 errors.push(modelState[key][i]);
                                             }
                                         }
-                                        app.modalErrors = errors;
+                                        app.modelErrors = errors;
                                     }
                                 }
                             });
@@ -106,6 +106,6 @@
     <h1>Known Issues</h1>
     <ul>
         <li>First Name if not entered; will be checked only at server side</li>
-        <li>When modalErrors exist; they dont disappear unless form is resubmitted</li>
+        <li>When modelErrors exist; they dont disappear unless form is resubmitted</li>
     </ul>
 </asp:Content>
