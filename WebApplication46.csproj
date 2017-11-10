@@ -230,6 +230,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="README.md" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -276,6 +277,7 @@
     <Content Include="Validation\FormView.aspx" />
     <Content Include="Validation\JQuery.aspx" />
     <Content Include="Validation\Knockout.aspx" />
+    <Content Include="Validation\Vue.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -284,6 +286,7 @@
     <Content Include="Site.Mobile.Master" />
     <Content Include="Views\web.config" />
     <Content Include="Scripts\knockout.validation.min.js.map" />
+    <Content Include="Scripts\package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -626,6 +629,13 @@
     </Compile>
     <Compile Include="Validation\Knockout.aspx.designer.cs">
       <DependentUpon>Knockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\Vue.aspx.cs">
+      <DependentUpon>Vue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validation\Vue.aspx.designer.cs">
+      <DependentUpon>Vue.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

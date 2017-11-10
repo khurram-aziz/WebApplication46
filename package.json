@@ -1,0 +1,24 @@
+{
+  "name": "webapplication",
+  "version": "1.0.0",
+  "description": "This repository is the learning playground for ASP.NET backend and some frontend libraries, the application was generted using Visual Studio 2013, ASP.NET 4.6 Web Forms with MVC and Web API added template was used",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khurram-aziz/WebApplication46.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khurram-aziz/WebApplication46/issues"
+  },
+  "homepage": "https://github.com/khurram-aziz/WebApplication46#readme",
+  "dependencies": {
+    "vee-validate": "^2.0.0-rc.21",
+    "vue": "^2.5.3"
+  },
+  "devDependencies": {}
+}
