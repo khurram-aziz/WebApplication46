@@ -11,6 +11,12 @@ namespace WebApplication.Controllers
 {
     public class AjaxController : ApiController, IDisposable
     {
+        class City
+        {
+            public int PostalCode { get; set; }
+            public string Name { get; set; }
+        }
+
         IContractResolver _resolver;
 
         public AjaxController()
@@ -38,12 +44,6 @@ namespace WebApplication.Controllers
             return this.Request.CreateResponse(HttpStatusCode.OK, list.ToArray());
         }
 
-        class City
-        {
-            public int PostalCode { get; set; }
-            public string Name { get; set; }
-        }
-
         [HttpGet]
         public HttpResponseMessage Cities(string state)
         {
@@ -60,8 +60,6 @@ namespace WebApplication.Controllers
                 })
             });
         }
-
-
 
         [HttpPost]
         public HttpResponseMessage Signup(UserModel user)
