@@ -3,3 +3,6 @@ This repository is the learning playground for ASP.NET backend and some frontend
 
 ## Validation
 This folder has some experiments for client side validation using jQuery, Knockout and Vue.js
+
+## AngularJS
+This folder has some getting started work for using AngularJS with ASP.NET backend
